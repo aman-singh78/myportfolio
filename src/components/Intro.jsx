@@ -9,7 +9,7 @@ function Intro() {
       <h2 className="ml-10 mt-3 text-xl font-bold opacity-50">
         a Creative Web Developer
       </h2>
-      <button className="flex items-center gap-2 border-2 rounded-full px-6 py-2 bg-[#F2F2F2] mt-8 ml-16">
+      <button onClick={e => alert("hello")} className="flex items-center gap-2 border-2 rounded-full px-6 py-2 bg-green-300  mt-8 ml-16">
         Resume <RiDownloadLine />
       </button>
     </div>

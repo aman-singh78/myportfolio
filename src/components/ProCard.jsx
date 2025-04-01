@@ -1,40 +1,40 @@
 import React from "react";
 import { FaGithub } from "react-icons/fa";
 import { MdLiveTv } from "react-icons/md";
-const ProCard = () => {
+const ProCard = (props) => {
   return (
     <div className="h-[25vw] w-[80vw] flex bg-[#F2F2F2] rounded-xl overflow-hidden shadow-xl">
       <div className="h-full w-[40%] flex items-center">
         <img
           className="w-full h-[20vw]"
-          src="https://theavnishkumar.in/_next/image?url=%2Fprojects%2Fjava.png&w=1200&q=75"
+          src={props.imageUrl}
           alt=""
         />
       </div>
       <div className="px-4 py-4 w-[60%]">
         <h1 className="font-semibold text-2xl leading-8 mb-1">
-          Library Management System
+          {props.title}
         </h1>
         <span className="font-medium text-sm leading-5 mr-4 px-1 py-0.3 rounded-md bg-[#DCFCE6]">
-          JAVA
+          {props.technologies[0]}
         </span>
         <span className="font-medium text-sm leading-5 mr-4 px-1 py-0.3 bg-[#DCFCE6] rounded-md">
-          MySql
+        {props.technologies[1]}
         </span>
         <span className="font-medium text-sm leading-5 px-1 py-0.3 bg-[#DCFCE6] rounded-md  ">
-          Netbeans
+        {props.technologies[2]}
         </span>
         <p className="mt-2 font-normal text-lg leading-7">
-          I created a Library Management System using Java, NetBeans, and MySQL.
-          It's like having a virtual librarian to keep track of books, users,
-          and lending activities. With a user-friendly interface designed in
-          NetBeans, navigating through the system feels intuitive and smooth.
-          Behind the scenes, MySQL ensures that all library data is safely
-          stored and easily accessible.
+          {props.description}
         </p>
         <div className="flex px-4 h-[20%] w-full items-center gap-6 justify-end">
+        
+        <a href={props.githubUrl} target="_blank" rel="noopener noreferrer">
           <FaGithub className="text-4xl" />
-          <MdLiveTv className="text-4xl" />
+          </a>
+          <a href={props.liveUrl} target="_blank" rel="noopener noreferrer">
+  <MdLiveTv className="text-4xl" />
+</a>
         </div>
       </div>
     </div>

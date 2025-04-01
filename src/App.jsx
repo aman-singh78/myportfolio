@@ -7,6 +7,8 @@ import Intro from "./components/Intro";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
+import Experience from "./components/Experience";
+import Footer from "./components/Footer"
 
 export default function App() {
   return (
@@ -19,9 +21,9 @@ export default function App() {
       {/* Scrollable Content */}
       <div className="w-full h-screen overflow-y-auto overflow-x-hidden">
         {/* Hero Section */}
-        <section className="h-screen w-full flex justify-center items-center relative">
+        <section id="home" className="h-screen w-full flex justify-center items-center relative">
           {/* 3D Canvas */}
-          {/* <Canvas
+          <Canvas
             camera={{ position: [0, 0.4, 3], fov: 30 }}
             className="absolute top-0 left-0 w-full h-full overflow-hidden"
           >
@@ -30,8 +32,8 @@ export default function App() {
             <directionalLight position={[0, 5, 5]} />
             <AnimatedModel />
             <OrbitControls enableZoom={false} />
-          </Canvas> */}
-          <img className="h-72 w-72 rounded-full ml-100 mt-0" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bW9kZWwlMjBtYWxlfGVufDB8fDB8fHww" alt="" />
+          </Canvas>
+          
 
           {/* Overlay to improve text visibility */}
           <div className="absolute top-0 left-0 w-full h-full bg-white-500 z-10 pointer-events-none"></div>
@@ -43,12 +45,14 @@ export default function App() {
         </section>
 
         {/* About Section */}
-        <section className="min-h-screen flex items-center justify-center bg-white">
+        <section id="about" className="min-h-screen flex items-center justify-center bg-white">
           <About />
         </section>
-
+        <section id="experience" className="flex items-center justify-center bg-white">
+          <Experience />
+        </section>
         {/* Skills Section */}
-        <section className="min-h-screen flex items-center justify-center bg-white">
+        <section id="skills" className="min-h-screen flex items-center justify-center bg-white">
           <Skills />
         </section>
 
@@ -56,7 +60,11 @@ export default function App() {
         <section className=" flex flex-wrap items-start justify-center bg-white">
           <Projects />
         </section>
+        <section className="flex flex-wrap items-start justify-center bg-white">
+          <Footer />
+        </section>
       </div>
+      
     </div>
   );
 }

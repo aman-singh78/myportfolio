@@ -5,9 +5,118 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React</title>
+    <style>
+      /* Basic styles for the preloader */
+      #preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, #134e5e, #71b280);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 9999; /* Ensure it is on top of everything */
+        color: white;
+        font-family: 'Arial', sans-serif;
+        opacity: 1;
+        transition: opacity 0.8s ease-out, visibility 0.8s ease-out; /* Smooth transition for opacity and visibility */
+      }
+
+      /* Hidden class to apply when we want to hide the preloader */
+      .hidden {
+        opacity: 0 !important;
+        visibility: hidden !important;
+      }
+
+      .spinner {
+        border: 8px solid rgba(255, 255, 255, 0.3); /* Light transparent */
+        border-top: 8px solid #fff; /* White color for the spinner */
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        animation: spin 1.5s linear infinite;
+        margin-bottom: 20px;
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      .quote {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-align: center;
+        animation: fadeInOut 2s ease-in-out infinite alternate;
+        max-width: 80%;
+      }
+
+      @keyframes fadeInOut {
+        0% { opacity: 0.5; }
+        50% { opacity: 1; }
+        100% { opacity: 0.5; }
+      }
+
+      .quote span {
+        display: block;
+        margin-top: 10px;
+        font-size: 1rem;
+        font-style: italic;
+      }
+      
+      /* Additional animation for elements inside preloader */
+      .fade-up {
+        animation: fadeUp 1s ease-out forwards;
+      }
+      
+      @keyframes fadeUp {
+        0% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        100% {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+      }
+    </style>
   </head>
   <body>
+    <div id="preloader">
+      <div class="spinner"></div>
+      <div class="quote">
+        <p>"Great things come to those who wait."</p>
+        <span>- Unknown</span>
+      </div>
+    </div>
     <div id="root"></div>
+    <script>
+      // JavaScript to handle preloader animation
+      document.addEventListener('DOMContentLoaded', () => {
+        const preloader = document.getElementById('preloader');
+        const spinner = preloader.querySelector('.spinner');
+        const quote = preloader.querySelector('.quote');
+        
+        // First animate elements inside the preloader
+        setTimeout(() => {
+          spinner.classList.add('fade-up');
+          quote.classList.add('fade-up');
+        }, 3200); // Start internal animations before the main fade
+        
+        // Then fade out the entire preloader
+        setTimeout(() => {
+          preloader.classList.add('hidden');
+          
+          // Remove the preloader completely after the transition ends
+          preloader.addEventListener('transitionend', () => {
+            preloader.remove();
+          });
+        }, 4000); // Total time before starting the fade-out
+      });
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
