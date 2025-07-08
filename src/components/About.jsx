@@ -15,7 +15,7 @@ function About() {
         <div className="w-full flex justify-center mb-5">
           <div className="h-56 w-48 sm:h-64 sm:w-56 rounded-lg overflow-hidden shadow-lg">
             <img
-              src="https://images.unsplash.com/photo-1492288991661-058aa541ff43?q=80&w=3087&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="https://images.unsplash.com/photo-1600574691453-499962cc0611?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8eW91bmclMjBtYW58ZW58MHx8MHx8fDA%3D"
               alt="Profile"
               className="w-full h-full object-cover"
             />
@@ -25,17 +25,17 @@ function About() {
         {/* Text content - kept full width and properly contained */}
         <div className="w-full text-center mb-8">
           <p className="text-base sm:text-lg leading-relaxed mb-4">
-            I am a third-year Computer Science undergraduate with a passion for
-            building and problem-solving. I love turning ideas into reality
-            through code, crafting solutions that make a real impact. Coding is
-            not just writing logic—it's a way to express creativity and bring{" "}
-            <span className="font-bold">thoughts to life</span>.
+            I’m a final-year Computer Science undergraduate with a strong
+            passion for building and problem-solving. I enjoy turning ideas into
+            real-world applications through code—crafting solutions that are
+            both functional and impactful. For me, coding isn’t just about
+            logic; it’s a creative process that transforms ideas into reality.
           </p>
 
           <p className="text-base sm:text-lg leading-relaxed">
-            Beyond coding, you'll find me on the football field, immersed in
-            video games, or sharpening my mind with a game of chess. Always
-            eager to learn, create, and push boundaries!
+            Beyond coding, you'll find me on the football field, enjoying a game
+            of cricket, or immersed in video games. I'm always eager to learn,
+            create, and push boundaries!
           </p>
         </div>
 

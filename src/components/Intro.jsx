@@ -43,20 +43,36 @@ function Intro() {
       animate="visible"
       className="flex flex-col items-center md:items-start justify-center text-black w-full px-6 md:px-12 lg:px-16 text-center md:text-left"
     >
-      <motion.h1 variants={itemVariants} className="text-4xl md:text-5xl lg:text-6xl font-bold mb-1">
+      <motion.h1
+        variants={itemVariants}
+        className="text-4xl md:text-5xl lg:text-6xl font-bold mb-1"
+      >
         Hi,
       </motion.h1>
-      <motion.h5 variants={itemVariants} className="text-lg md:text-xl opacity-60 mb-1">
+      <motion.h5
+        variants={itemVariants}
+        className="text-lg md:text-xl opacity-60 mb-1"
+      >
         My name is
       </motion.h5>
-      <motion.h1 variants={itemVariants} className="text-3xl md:text-4xl lg:text-5xl font-bold text-emerald-600 mb-2">
-        Sumit Singh Bora
+      <motion.h1
+        variants={itemVariants}
+        className="text-3xl md:text-4xl lg:text-5xl font-bold text-emerald-600 mb-2"
+      >
+        Aman Singh Thapa
       </motion.h1>
-      <motion.h2 variants={itemVariants} className="text-xl md:text-2xl font-medium opacity-70 mb-4 md:mb-6">
+      <motion.h2
+        variants={itemVariants}
+        className="text-xl md:text-2xl font-medium opacity-70 mb-4 md:mb-6"
+      >
         a Creative Web Developer
       </motion.h2>
-      <motion.p variants={itemVariants} className="text-base md:text-lg opacity-80 mb-6 md:mb-8 max-w-xl">
-        I build exceptional digital experiences that combine <br /> beautiful design with cutting-edge technology.
+      <motion.p
+        variants={itemVariants}
+        className="text-base md:text-lg opacity-80 mb-6 md:mb-8 max-w-xl"
+      >
+        I build exceptional digital experiences that combine <br /> beautiful
+        design with cutting-edge technology.
       </motion.p>
       {/* <motion.button
         variants={itemVariants}

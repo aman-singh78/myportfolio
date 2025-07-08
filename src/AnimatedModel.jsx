@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 function AnimatedModel() {
   // Load the first model and animation (from /model.glb)
   const { scene: modelScene, animations: modelAnimations } =
-    useGLTF("/model1.glb");
+    useGLTF("/model.glb");
 
   // Load the second animation (from /modelAnimation.glb)
   const { animations: animationActions } = useGLTF("/modelAnimation.glb");
