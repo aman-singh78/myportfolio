@@ -4,7 +4,7 @@ import { BiBriefcase, BiDownload, BiMenu, BiX } from "react-icons/bi";
 function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const resumeLink =
-    "https://drive.google.com/file/d/1X6U1Ams240mZKiKUbP5SJmAvyvuFOmov/view?usp=drivesdk";
+    "https://drive.google.com/file/d/1XtYXOqZqvDMj5af-UGM8xO2kDS6qVkNo/view?usp=drivesdk";
 
   const email = "amansinghthapa33@gmail.com";
 
