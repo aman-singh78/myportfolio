@@ -5,11 +5,11 @@ import ProCard from "./ProCard";
 const projects = [
   {
     imageUrl: "netFlix.png",
-    title: "FlixGPT - Your AI-powered Netflix Movie Recommender ",
+    title: "YogaLife - A Digital Wellness Ecosystem ",
     description:
-      "An AI-powered movie recommendation app that helps users find the perfect movie or show based on their search. Powered by GPT, it delivers smart, context-aware suggestions tailored to your mood and interests.",
-    githubUrl: "https://github.com/aman-singh78/netflix-gpt",
-    liveUrl: "#",
+      "YogaLife is a full-stack wellness platform that bridges the gap between yoga instructors and students through real-time HD video streaming and community-driven engagement. Designed with a modern, responsive interface, the platform includes personalized instructor/student dashboards, session scheduling, and a powerful admin panel with usage analytics. With features to build an active wellness community, YogaLife transforms traditional yoga into a scalable digital experience",
+    githubUrl: "https://github.com/aman-singh78/yogaFrontend",
+    liveUrl: "https://yoga-frontend-beta.vercel.app/",
     technologies: ["React", "Tailwind", "Node.js"],
   },
   {
@@ -36,7 +36,7 @@ const projects = [
     description:
       "Our 3D Developer Portfolio redefines traditional portfolios by incorporating an interactive 3D model that closely resembles the developer, offering a next-level immersive experience. Built with React.js, Three.js, and Tailwind CSS, this portfolio showcases skills, projects, and achievements in a visually stunning and engaging way.",
     githubUrl: "https://github.com/aman-singh78/myportfolio",
-    liveUrl: "#",
+    liveUrl: "https://myportfolio-omega-fawn-19.vercel.app/",
     technologies: ["Three.js", "React.js", "Framer Motion"],
   },
 ];
